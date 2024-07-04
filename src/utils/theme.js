@@ -5,6 +5,7 @@ const theme = extendTheme({
     primary:{
       100: '#E2452E',
       200: '#ec8451',
+      300: '#e8b070'
     },
     secondary:{
       100: 'linear-gradient(90deg, #e8b070 0%, #e2452e 100%)',
@@ -17,8 +18,9 @@ const theme = extendTheme({
     }
   },
   fonts: {
-    heading: 'Manrope, sans-serif',
-    body: 'Manrope, sans-serif',
+    heading: 'Open Sans, sans-serif',
+    body: 'Poppins, sans-serif',
+
 },
 });
 
