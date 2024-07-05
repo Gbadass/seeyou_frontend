@@ -6,6 +6,8 @@ export default function BackgroundBanner() {
     <div className='w-full h-full relative'>
     <div className='absolute'>
     <Circle1/>
+    <Circle2/>
+    <Circle3/>
     </div>
     </div>
     </>

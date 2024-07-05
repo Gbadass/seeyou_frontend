@@ -131,7 +131,77 @@
     top: 13px;
   }
 
-  
+  .svg1{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .svg2{
+    position: absolute;
+    bottom: -45px;
+    right: 0px;
+  }
+
+  .svg3{
+    position: absolute;
+    bottom: -25px;
+    right: 0px;
+  }
+
+  .svg4{
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+  }
+
+  .svg5{
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+  }
+
+  .svg6{
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+  }
+
+  .svg7{
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+  }
+
+  .svg_card{
+    z-index: 2;
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+  }
+
+  .svg_card2{
+    z-index: 2;
+    position: absolute;
+    left: -60px;
+    bottom: -15px;
+  }
+
+
+  .svg_card3{
+    z-index: 2;
+    position: absolute;
+    right: -30px;
+    top: -10px;
+  }
+
+  .svg_card4{
+    z-index: 2;
+    position: absolute;
+    left: -60px;
+    top: -10px;
+  }
+
 
 
 
