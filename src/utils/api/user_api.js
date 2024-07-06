@@ -17,7 +17,7 @@ const makeRequest = async (method, endpoint, data, queryParams) => {
 
 // export const loginsd = async (queryParams) => makeRequest('post', 'login', null, queryParams);
 export const login = async (credentials) => makeRequest('post', 'login', credentials);
-export const signUp = async (credentials) => makeRequest('post', 'signup_phone', credentials);
+export const signUp = async (credentials) => makeRequest('post', 'signup', credentials);
 export const loggedIn = async () => makeRequest('get', 'loggedIn', {});
 export const chartUsers = async (query) => makeRequest('get', 'chart_users', {}, query);
 export const getUser = async (search) => makeRequest('get', 'get_user', {}, search);

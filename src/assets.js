@@ -1,3 +1,9 @@
+import googlePng from './asset/images/google 2.png'
+
+export  { googlePng };
+
+
+
 export const Circle1 = () => {
   <svg
     width="343"

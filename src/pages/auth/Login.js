@@ -4,13 +4,18 @@ import { useState } from "react";
 import theme from "./../../utils/theme";
 import { BiChevronDown } from "react-icons/bi";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import BackgroundBanner from "../../components/BackgroundBanner";
+import { googlePng } from "./../../assets"
 
 export default function Login() {
   const { colors, fonts } = useTheme(theme);
   const [modal, setModal] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxClick = () => {
+    setIsChecked(!isChecked);
+  };
 
   const openModal = () => {
     setModal((prevModal) => !prevModal);
@@ -80,7 +85,15 @@ export default function Login() {
 
               <div className="flex items-center gap-3 mt-5 justify-between">
                 <div className="flex gap-2">
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    onClick={handleCheckboxClick}
+                    style={{
+                      backgroundColor: isChecked
+                        ? colors.primary[100]
+                        : "transparent",
+                    }}
+                  />
                   <p
                     className="text-base font-medium"
                     style={{ fontFamily: fonts.body }}
@@ -89,7 +102,7 @@ export default function Login() {
                   </p>
                 </div>
 
-                <p style={{color:colors.primary[100]}}>Forget Password?</p>
+                <p style={{ color: colors.primary[100] }}>Forget Password?</p>
               </div>
 
               <div className="mt-8">
@@ -103,19 +116,23 @@ export default function Login() {
                   Sign in
                 </button>
               </div>
-<div className="flex mt-3 items-center gap-2">
-<hr className="border-b border-t-0 w-full"/> <p className="text-sm" style={{color:colors.primary[100]}}>OR</p> <hr className=" border-b border-t-0 w-full"/>
-</div>
+              <div className="flex mt-3 items-center gap-2">
+                <hr className="border-b border-t-0 w-full" />{" "}
+                <p className="text-sm" style={{ color: colors.primary[100] }}>
+                  OR
+                </p>{" "}
+                <hr className=" border-b border-t-0 w-full" />
+              </div>
 
-
-<div className="mt-3">
+              <div className="mt-3">
                 <button
-                  className="border w-full h-14 text-base rounded-md font-semibold"
+                  className="border w-full h-14 text-base rounded-md font-semibold items-center"
                   style={{
-                    fontFamily: fonts.heading,borderColor:colors.primary[200]
+                    fontFamily: fonts.heading,
+                    borderColor: colors.primary[200],
                   }}
                 >
-                  
+                  {/* <img className="border" src={googlePng} alt="" /> */}
                   Sign in With Google
                 </button>
               </div>

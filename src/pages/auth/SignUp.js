@@ -4,13 +4,26 @@ import { useState } from "react";
 import theme from "./../../utils/theme";
 import { BiChevronDown } from "react-icons/bi";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import BackgroundBanner from "../../components/BackgroundBanner";
+import {signUp} from './../../utils/api/user_api'
+import { useDispatch, useSelector } from "react-redux";
+import {addNotification} from "./../../utils/slicers/notificationSlice"
+import Swal from 'sweetalert2'
 
 export default function SignUp() {
   const { colors, fonts } = useTheme(theme);
   const [modal, setModal] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const dispatch = useDispatch();
+  const [userDetails,setUserDetails]=useState({
+    first_name: "",
+    last_name: "",
+    phone: "",
+    gender: "",
+    email: "",
+    password: ""
+  })
+  const [err,setErr]=useState(false)
 
   const openModal = () => {
     setModal((prevModal) => !prevModal);
@@ -18,12 +31,63 @@ export default function SignUp() {
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
+    setUserDetails({ ...userDetails, gender: option });
     setModal(false);
   };
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
   };
+
+  const handleValidation = () => {
+    if (
+      userDetails.first_name === "" ||
+      userDetails.last_name === "" ||
+      userDetails.phone === "" ||
+      userDetails.gender === "" ||
+      userDetails.email === "" ||
+      userDetails.password === ""
+    ) {
+      setErr(true);
+    } else {
+      setErr(false);
+    }
+  };
+  const onSubmitForm=()=>{
+    handleValidation()
+    handleSignUp()
+  }
+
+  const handleInputChange =(e)=>{
+    const {name,value} = e.target;
+    setUserDetails({...userDetails,[name]:value})
+    handleValidation()
+
+
+  }
+
+  // console.log(userDetails)
+
+  const handleSignUp = async ()=>{
+    let {status,message,data} =  await signUp(userDetails)
+    if(status){
+      Swal.fire({
+        icon: "Success",
+        title: "success!",
+        text: "Sign up successful!",
+      });
+    }else{
+      dispatch(
+        addNotification({
+          type:"error",
+          title:"Operation Failed",
+          decription:message,
+        })
+      );
+    }
+
+
+  }
 
   return (
     <>
@@ -44,12 +108,13 @@ export default function SignUp() {
           <div className="mt-5">
             <div className="grid grid-cols-2 gap-3">
               <div className="form2 ">
-                {/* {!userDetails.fullName && err && (
-                <span className="err_msg">please enter your fullname</span>
-              )} */}
+                {!userDetails.first_name && err && (
+                <span className="err_msg">please enter your firstname</span>
+              )}
                 <input
                   type="text"
-                  name="fullName"
+                  onChange={handleInputChange}
+                  name="first_name"
                   className="form_input"
                   autoComplete="off"
                   placeholder=" "
@@ -60,15 +125,16 @@ export default function SignUp() {
                 </label>
               </div>
               <div className="form2 ">
-                {/* {!userDetails.fullName && err && (
-                <span className="err_msg">please enter your fullname</span>
-              )} */}
+                {!userDetails.last_name && err && (
+                <span className="err_msg">please enter your lastname</span>
+              )}
                 <input
                   type="text"
-                  name="fullName"
+                  name="last_name"
                   className="form_input"
                   autoComplete="off"
                   placeholder=" "
+                  onChange={handleInputChange}
                 />
 
                 <label htmlFor="email" className="form_label">
@@ -76,15 +142,16 @@ export default function SignUp() {
                 </label>
               </div>
               <div className="form2 ">
-                {/* {!userDetails.fullName && err && (
-                <span className="err_msg">please enter your fullname</span>
-              )} */}
+                {!userDetails.phonenumber && err && (
+                <span className="err_msg">please enter your phone</span>
+              )}
                 <input
-                  type="text"
-                  name="fullName"
+                  type="number"
+                  name="phone"
                   className="form_input"
                   autoComplete="off"
                   placeholder=" "
+                  onChange={handleInputChange}
                 />
 
                 <label htmlFor="email" className="form_label">
@@ -92,9 +159,9 @@ export default function SignUp() {
                 </label>
               </div>
               <div className="form2">
-                {/* {!userDetails.fullName && err && (
-                <span className="err_msg">please enter your fullname</span>
-              )} */}
+                {!userDetails.gender && err && (
+                <span className="err_msg">please choose your gender</span>
+              )}
                 <div
                   type="text"
                   name="gender"
@@ -121,15 +188,16 @@ export default function SignUp() {
               </div>
             </div>
             <div className="form ">
-              {/* {!userDetails.fullName && err && (
-                <span className="err_msg">please enter your fullname</span>
-              )} */}
+              {!userDetails.email && err && (
+                <span className="err_msg">please enter your email</span>
+              )}
               <input
                 type="email"
-                name="fullName"
+                name="email"
                 className="form_input"
                 autoComplete="off"
                 placeholder=" "
+                onChange={handleInputChange}
               />
 
               <label htmlFor="email" className="form_label">
@@ -137,15 +205,16 @@ export default function SignUp() {
               </label>
             </div>
             <div className="form ">
-              {/* {!userDetails.fullName && err && (
-                <span className="err_msg">please enter your fullname</span>
-              )} */}
+              {!userDetails.password && err && (
+                <span className="err_msg">please enter your password</span>
+              )}
               <input
                 type={showPassword ? "text" : "password"}
-                name="fullName"
+                name="password"
                 className="form_input"
                 autoComplete="off"
                 placeholder=" "
+                onChange={handleInputChange}
               />
               <span
                 className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
@@ -174,11 +243,13 @@ export default function SignUp() {
 
             <div className="mt-8">
               <button
+              onClick={()=>onSubmitForm()}
                 className="linear_bg w-full h-14 text-base rounded-md"
                 style={{
                   color: colors.tertiary[100],
                   fontFamily: fonts.heading,
                 }}
+
               >
                 Create Account
               </button>
