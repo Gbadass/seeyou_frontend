@@ -4,7 +4,7 @@ import { useState } from "react";
 import theme from "./../../utils/theme";
 import { BiChevronDown } from "react-icons/bi";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { googlePng } from "./../../assets"
+import { googlePng } from "./../../assets";
 import { login } from "./../../utils/api/user_api";
 import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
   const { colors, fonts } = useTheme(theme);
   const [showPassword, setShowPassword] = useState(false);
-  const [err,setErr]=useState(false)
+  const [err, setErr] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({
@@ -27,29 +27,27 @@ export default function Login() {
     setIsChecked(!isChecked);
   };
 
+  const handleInputChange = (e) => {
+    const { value, name } = e.target;
+    setUserDetails({ ...userDetails, [name]: value });
+  };
 
-
-  const handleInputChange=(e)=>{
-    const {value,name} = e.target;
-    setUserDetails({...userDetails,[name]:value})
-  }
-
-  console.log(userDetails)
+  console.log(userDetails);
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
   };
 
-  const handleLogin = async()=>{
+  const handleLogin = async () => {
     let { status, message, data } = await login(userDetails);
     try {
-      if(status){
+      if (status) {
         Swal.fire({
           title: "Success!",
           text: "Login succesful!",
           icon: "success",
         });
-      }else{
+      } else {
         dispatch(
           addNotification({
             type: "error",
@@ -67,10 +65,7 @@ export default function Login() {
         })
       );
     }
-
-
-
-  }
+  };
 
   return (
     <>
@@ -88,8 +83,8 @@ export default function Login() {
             <div className="mt-20">
               <div className="form ">
                 {!userDetails.fullName && err && (
-                <span className="err_msg">please enter your email</span>
-              )}
+                  <span className="err_msg">please enter your email</span>
+                )}
                 <input
                   type="email"
                   name="email"
@@ -105,8 +100,8 @@ export default function Login() {
               </div>
               <div className="form ">
                 {!userDetails.fullName && err && (
-                <span className="err_msg">please enter your password</span>
-              )}
+                  <span className="err_msg">please enter your password</span>
+                )}
                 <input
                   type={showPassword ? "text" : "password"}
                   name="password"
@@ -155,9 +150,8 @@ export default function Login() {
                   style={{
                     color: colors.tertiary[100],
                     fontFamily: fonts.heading,
-
                   }}
-                  onClick={()=>handleLogin()}
+                  onClick={() => handleLogin()}
                 >
                   Sign in
                 </button>
@@ -172,14 +166,15 @@ export default function Login() {
 
               <div className="mt-3">
                 <button
-                  className="border w-full h-14 text-base rounded-md font-semibold items-center"
+                  className="flex justify-center border w-full h-14 text-base rounded-md font-semibold items-center gap-2"
                   style={{
                     fontFamily: fonts.heading,
                     borderColor: colors.primary[200],
                   }}
                 >
-                  {/* <img className="border" src={googlePng} alt="" /> */}
-                  Sign in With Google
+                  <img src={googlePng} alt="" />
+
+                  <p> Sign in With Google</p>
                 </button>
               </div>
             </div>
