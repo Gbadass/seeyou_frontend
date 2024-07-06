@@ -7,9 +7,6 @@ const axiosInstance = axios.create({
   // Add other configurations as needed
 });
 
-console.log("base_url",BASE_URL)
-
-
 export const setupAxiosInterceptors = (dispatch) => {
   // Add an interceptor to include a token in each request
   axiosInstance.interceptors.request.use((config) => {

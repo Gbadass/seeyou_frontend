@@ -5,30 +5,72 @@ import theme from "./../../utils/theme";
 import { BiChevronDown } from "react-icons/bi";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { googlePng } from "./../../assets"
+import { login } from "./../../utils/api/user_api";
+import Swal from "sweetalert2";
+import { useDispatch, useSelector } from "react-redux";
+import { addNotification } from "./../../utils/slicers/notificationSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const { colors, fonts } = useTheme(theme);
-  const [modal, setModal] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [err,setErr]=useState(false)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [userDetails, setUserDetails] = useState({
+    email: "",
+    password: "",
+  });
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxClick = () => {
     setIsChecked(!isChecked);
   };
 
-  const openModal = () => {
-    setModal((prevModal) => !prevModal);
-  };
 
-  const handleOptionSelect = (option) => {
-    setSelectedOption(option);
-    setModal(false);
-  };
+
+  const handleInputChange=(e)=>{
+    const {value,name} = e.target;
+    setUserDetails({...userDetails,[name]:value})
+  }
+
+  console.log(userDetails)
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
   };
+
+  const handleLogin = async()=>{
+    let { status, message, data } = await login(userDetails);
+    try {
+      if(status){
+        Swal.fire({
+          title: "Success!",
+          text: "Login succesful!",
+          icon: "success",
+        });
+      }else{
+        dispatch(
+          addNotification({
+            type: "error",
+            title: "Operation Failed",
+            decription: message,
+          })
+        );
+      }
+    } catch (error) {
+      dispatch(
+        addNotification({
+          type: "error",
+          title: "Operation Failed",
+          decription: message,
+        })
+      );
+    }
+
+
+
+  }
 
   return (
     <>
@@ -45,15 +87,16 @@ export default function Login() {
             </p>
             <div className="mt-20">
               <div className="form ">
-                {/* {!userDetails.fullName && err && (
-                <span className="err_msg">please enter your fullname</span>
-              )} */}
+                {!userDetails.fullName && err && (
+                <span className="err_msg">please enter your email</span>
+              )}
                 <input
                   type="email"
-                  name="fullName"
+                  name="email"
                   className="form_input"
                   autoComplete="off"
                   placeholder=" "
+                  onChange={handleInputChange}
                 />
 
                 <label htmlFor="email" className="form_label">
@@ -61,15 +104,16 @@ export default function Login() {
                 </label>
               </div>
               <div className="form ">
-                {/* {!userDetails.fullName && err && (
-                <span className="err_msg">please enter your fullname</span>
-              )} */}
+                {!userDetails.fullName && err && (
+                <span className="err_msg">please enter your password</span>
+              )}
                 <input
                   type={showPassword ? "text" : "password"}
-                  name="fullName"
+                  name="password"
                   className="form_input"
                   autoComplete="off"
                   placeholder=" "
+                  onChange={handleInputChange}
                 />
                 <span
                   className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
@@ -111,7 +155,9 @@ export default function Login() {
                   style={{
                     color: colors.tertiary[100],
                     fontFamily: fonts.heading,
+
                   }}
+                  onClick={()=>handleLogin()}
                 >
                   Sign in
                 </button>
