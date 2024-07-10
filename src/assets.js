@@ -1,6 +1,9 @@
 import googlePng from './asset/images/google 2.png'
+import doubleArrow from './asset/images/double-arrow 1.png'
+import linkPng from './asset/images/link (3) 2.png'
 
-export  { googlePng };
+
+export  { googlePng,doubleArrow,linkPng };
 
 
 

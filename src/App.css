@@ -3,16 +3,12 @@
 @tailwind utilities;
 
 @layer components {
+  .linear_bg {
+    background: linear-gradient(90deg, #e8b070 0%, #e2452e 100%);
 
-
-.linear_bg {
-  background: linear-gradient(90deg, #e8b070 0%, #e2452e 100%);
-
-  /* -webkit-background-clip: text;
+    /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
-}
-
-
+  }
 
   .form {
     position: relative;
@@ -35,8 +31,6 @@
     color: red;
   }
 
-
-
   .form_input {
     position: absolute;
     top: 0;
@@ -50,7 +44,6 @@
     background: none;
     padding: 1.25rem;
   }
-
 
   .form_input2 {
     position: absolute;
@@ -66,14 +59,12 @@
     padding: 1.25rem;
   }
 
-
-
   .form_input:focus {
     border: 1px solid #e8b070;
     outline: none;
   }
 
-  .chevron_down{
+  .chevron_down {
     position: absolute;
     top: 15px;
     right: 20px;
@@ -81,7 +72,6 @@
     color: #525252;
     cursor: pointer;
   }
-
 
   .form_label {
     font-family: "Poppins", sans-serif;
@@ -92,6 +82,8 @@
     color: #bcbcbc;
     cursor: pointer;
     background-color: #ffffff;
+    border: 1px solid black;
+    z-index: 1px;
   }
 
   .form_input:focus ~ .form_label,
@@ -106,7 +98,7 @@
     border: #e8b070;
   }
 
-  .select_dropdown{
+  .select_dropdown {
     position: absolute;
     padding: 5px;
     top: 50px;
@@ -116,98 +108,95 @@
     background-color: #ffffff;
     z-index: 1;
     border-radius: 5px;
-
   }
 
-  .select_dropdown p{
+  .select_dropdown p {
     /* border-bottom:1px solid #e4e4e4 ; */
     padding: 5px;
     cursor: pointer;
-
   }
 
-  .select_dropdown p:hover{
+  .select_dropdown p:hover {
     background-color: #bcbcbc;
   }
 
-  .selected_option{
+  .selected_option {
     position: absolute;
     top: 13px;
     left: 20px;
   }
 
-  .svg1{
+  .svg1 {
     position: absolute;
     bottom: 20px;
     right: 20px;
   }
 
-  .svg2{
+  .svg2 {
     position: absolute;
     bottom: -45px;
     right: 0px;
   }
 
-  .svg3{
+  .svg3 {
     position: absolute;
     bottom: -25px;
     right: 0px;
   }
 
-  .svg4{
+  .svg4 {
     position: absolute;
     bottom: -20px;
     right: 0px;
   }
 
-  .svg5{
+  .svg5 {
     position: absolute;
     bottom: -20px;
     right: 0px;
   }
 
-  .svg6{
+  .svg6 {
     position: absolute;
     bottom: -20px;
     right: 0px;
   }
 
-  .svg7{
+  .svg7 {
     position: absolute;
     bottom: -20px;
     right: 0px;
   }
 
-  .svg_card{
+  .svg_card {
     z-index: 2;
     position: absolute;
     right: 10px;
     bottom: 30px;
   }
 
-  .svg_card2{
+  .svg_card2 {
     z-index: 2;
     position: absolute;
     left: -60px;
     bottom: -15px;
   }
 
-
-  .svg_card3{
+  .svg_card3 {
     z-index: 2;
     position: absolute;
     right: -30px;
     top: -10px;
   }
 
-  .svg_card4{
+  .svg_card4 {
     z-index: 2;
     position: absolute;
     left: -60px;
     top: -10px;
   }
 
-
-
-
+  .sidebar_width{
+    width: 293px;
+  }
 }
