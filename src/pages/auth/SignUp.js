@@ -162,12 +162,12 @@ const [loading,setLoading]=useState(false)
                   {!userDetails.gender && err && (
                     <span className="err_msg">please choose your gender</span>
                   )}
-                  <div
+                  <input
                     type="text"
                     name="gender"
                     className="form_input "
                     autoComplete="off"
-                  >
+                  />
                     <p className="selected_option">{selectedOption || ""}</p>
 
                     <BiChevronDown
@@ -187,7 +187,6 @@ const [loading,setLoading]=useState(false)
                     ) : (
                       ""
                     )}
-                  </div>
 
                   <label htmlFor="email" className="form_label">
                     Gender
