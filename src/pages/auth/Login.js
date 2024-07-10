@@ -10,9 +10,13 @@ import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
 import { addNotification } from "./../../utils/slicers/notificationSlice";
 import { useNavigate } from "react-router-dom";
+import { Spinner, Text } from "@chakra-ui/react";
+import { setUserAuth } from "../../utils/slicers/userSlice";
+import { useEffect } from "react";
 
 export default function Login() {
   const { colors, fonts } = useTheme(theme);
+  const [loading,setLoading]=useState(false)
   const [showPassword, setShowPassword] = useState(false);
   const [err, setErr] = useState(false);
   const dispatch = useDispatch();
@@ -22,6 +26,8 @@ export default function Login() {
     password: "",
   });
   const [isChecked, setIsChecked] = useState(false);
+  const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
+  const user = useSelector((state) => state.user);
 
   const handleCheckboxClick = () => {
     setIsChecked(!isChecked);
@@ -32,21 +38,33 @@ export default function Login() {
     setUserDetails({ ...userDetails, [name]: value });
   };
 
-  console.log(userDetails);
+  // console.log(userDetails);
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
   };
 
+  useEffect(() => {
+    // Check if the user is authenticated
+    if (isAuthenticated) {
+      // Navigate to the dashboard
+      navigate('/layout');
+    }
+  }, [isAuthenticated, navigate]);
+
   const handleLogin = async () => {
-    let { status, message, data } = await login(userDetails);
+    setLoading(true)
+    let { status, message,token, data } = await login(userDetails);
     try {
       if (status) {
+        dispatch(setUserAuth({ user: data, token }));
         Swal.fire({
           title: "Success!",
           text: "Login succesful!",
           icon: "success",
         });
+
+
       } else {
         dispatch(
           addNotification({
@@ -65,6 +83,7 @@ export default function Login() {
         })
       );
     }
+    setLoading(false)
   };
 
   return (
@@ -153,7 +172,7 @@ export default function Login() {
                   }}
                   onClick={() => handleLogin()}
                 >
-                  Sign in
+                 {loading? <Spinner/> :  "Sign in"}
                 </button>
               </div>
               <div className="flex mt-3 items-center gap-2">

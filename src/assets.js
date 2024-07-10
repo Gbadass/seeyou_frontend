@@ -1,9 +1,19 @@
 import googlePng from './asset/images/google 2.png'
 import doubleArrow from './asset/images/double-arrow 1.png'
 import linkPng from './asset/images/link (3) 2.png'
+import bookingPng from './asset/images/appointment 1.png'
+import avialabilityPng from './asset/images/calendar (2) 1.png'
+import inboxPng from './asset/images/chat (5) 1.png'
+import calenderPng from './asset/images/calendar 2.png'
+import applicationPng from './asset/images/application.png'
 
 
-export  { googlePng,doubleArrow,linkPng };
+
+
+
+
+
+export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng };
 
 
 

@@ -82,7 +82,7 @@
     color: #bcbcbc;
     cursor: pointer;
     background-color: #ffffff;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     z-index: 1px;
   }
 
@@ -117,7 +117,7 @@
   }
 
   .select_dropdown p:hover {
-    background-color: #bcbcbc;
+    background-color: #f3f3f3;
   }
 
   .selected_option {

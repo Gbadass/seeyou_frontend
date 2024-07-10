@@ -1,4 +1,5 @@
 import {doubleArrow,linkPng} from './../assets'
+import routes from '../routes'
 
 
 export default function Sidebar(){
@@ -9,7 +10,7 @@ export default function Sidebar(){
     <h1 className="font-bold text-2xl">LOGO</h1>
     <img src={doubleArrow} className="w-4 h-4" alt="" />
     </div>
-    div
+  
     <div className='flex gap-3'>
     <img src={linkPng} className="w-4 h-4" alt="" />
     <p>Event Types</p>
