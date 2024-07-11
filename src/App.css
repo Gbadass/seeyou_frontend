@@ -197,6 +197,34 @@
   }
 
   .sidebar_width{
-    width: 293px;
+    width: 30%;
+  }
+
+  .sidebar_route_h{
+    height: 50px;
+
+  }
+
+  .top_bar_btn{
+    height: 35px;
+    width: 99px;
+    
+  }
+
+  .top_bar_btn2{
+    height: 35px;
+    width: 129px;
+    
+  }
+
+  .topbar_inpt{
+    width: 172px;
+    height: 40px;
+    border-radius: 30px;
+  }
+
+  .search_png{
+    top: 12px;
+    right: 20px;
   }
 }

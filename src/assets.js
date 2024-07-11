@@ -6,6 +6,11 @@ import avialabilityPng from './asset/images/calendar (2) 1.png'
 import inboxPng from './asset/images/chat (5) 1.png'
 import calenderPng from './asset/images/calendar 2.png'
 import applicationPng from './asset/images/application.png'
+import addPng from './asset/images/add (4) 1.png'
+import PersonPng from './asset/images/add-user (1) 1.png'
+import searchPng from './asset/images/search (1) 1.png'
+import notificationPng from './asset/images/notification (3) 1.png'
+import profilePng from './asset/images/Untitled design - 2024-06-18T163512.984 1.png'
 
 
 
@@ -13,7 +18,12 @@ import applicationPng from './asset/images/application.png'
 
 
 
-export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng };
+
+
+
+
+
+export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng,addPng,PersonPng,searchPng,notificationPng,profilePng };
 
 
 
