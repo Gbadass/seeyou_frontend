@@ -1,6 +1,7 @@
 import {linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng} from './assets'
 import Layout from '././components/Layout'
 import Login from './pages/auth/Login'
+import EventTypes from './pages/EventTypes'
 
 
 let routes = [
@@ -16,7 +17,7 @@ let routes = [
     path: "/eventtypes",
     name: "Event Types",
     icon: <img src={linkPng} className="" alt="" />,
-    component: Layout,
+    component: EventTypes,
     isSidebar: true,
     roles: [],
 },

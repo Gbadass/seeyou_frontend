@@ -24,6 +24,9 @@ const theme = extendTheme({
     },
     input_bg:{
       100:'#F3F3F3'
+    },
+    bordercolor:{
+      100:'#E4E1E1'
     }
 
   },

@@ -11,6 +11,7 @@ import PersonPng from './asset/images/add-user (1) 1.png'
 import searchPng from './asset/images/search (1) 1.png'
 import notificationPng from './asset/images/notification (3) 1.png'
 import profilePng from './asset/images/Untitled design - 2024-06-18T163512.984 1.png'
+import LinkPng from './asset/images/link (2) 1.png'
 
 
 
@@ -23,7 +24,8 @@ import profilePng from './asset/images/Untitled design - 2024-06-18T163512.984 1
 
 
 
-export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng,addPng,PersonPng,searchPng,notificationPng,profilePng };
+
+export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng,addPng,PersonPng,searchPng,notificationPng,profilePng,LinkPng };
 
 
 

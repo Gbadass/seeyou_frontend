@@ -14,7 +14,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className="py-5 pr-3 pl-10 w-full border-r h-screen">
+      <div className="py-5 pr-3 pl-10 z-10 border-r h-screen overflow-x-hidden fixed sidebar_width bg-white">
         <div className="overflow-scroll">
           <div className="flex items-center justify-between">
             <h1 className="font-bold text-2xl">LOGO</h1>
@@ -25,7 +25,7 @@ export default function Sidebar() {
             {routes
               .filter((route) => route.isSidebar)
               .map((route) => (
-                <Link>
+                <Link key={route.path} to={route.path}>
                   <div
                     className="flex gap-3 mt-3 items-center sidebar_route_h rounded-xl p-2 "
                     style={{

@@ -196,35 +196,64 @@
     top: -10px;
   }
 
-  .sidebar_width{
-    width: 30%;
+  .sidebar_width {
+    /* width: 293px; */
+    width: 23%;
   }
 
-  .sidebar_route_h{
+  .sidebar_width2 {
+    /* width: 293px; */
+    width: 77%;
+  }
+
+  .sidebar_route_h {
     height: 50px;
-
   }
 
-  .top_bar_btn{
+  .top_bar_btn {
     height: 35px;
     width: 99px;
-    
   }
 
-  .top_bar_btn2{
+  .top_bar_btn2 {
     height: 35px;
     width: 129px;
-    
   }
 
-  .topbar_inpt{
+  .top_bar_btn3 {
+    height: 35px;
+    width: 163px;
+  }
+
+  .topbar_inpt {
     width: 172px;
     height: 40px;
     border-radius: 30px;
   }
 
-  .search_png{
+  .search_png {
     top: 12px;
     right: 20px;
+  }
+
+  .no_eventCard {
+    height: 547px;
+    border-radius: 30px;
+    border: 1px solid #e4e1e1;
+  }
+
+  .link_circle{
+    width: 60px;
+    height: 60px;
+  }
+
+  .centerItem{
+    margin: 0 auto;
+  }
+
+  .noevent_message{
+    width: 371px;
+    line-height: 22px;
+    text-align: center;
   }
 }
