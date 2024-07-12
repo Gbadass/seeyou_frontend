@@ -15,7 +15,20 @@ const theme = extendTheme({
     },
     text:{
       500: '#E2452E',
+    },
+    hover:{
+      100:'#F6D8FE'
+    },
+    primary_purp:{
+      100:'#C813F6'
+    },
+    input_bg:{
+      100:'#F3F3F3'
+    },
+    bordercolor:{
+      100:'#E4E1E1'
     }
+
   },
   fonts: {
     heading: 'Open Sans, sans-serif',

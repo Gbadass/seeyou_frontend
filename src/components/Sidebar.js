@@ -1,22 +1,47 @@
-import {doubleArrow,linkPng} from './../assets'
-import routes from '../routes'
+import { doubleArrow, linkPng } from "./../assets";
+import routes from "../routes";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { Box, theme, useTheme } from "@chakra-ui/react";
 
+export default function Sidebar() {
+  const location = useLocation();
+  const { colors, fonts } = useTheme(theme);
 
-export default function Sidebar(){
-  return(
+  const isActiveRoute = (path) => {
+    return location.pathname.startsWith(path);
+  };
+
+  return (
     <>
-    <div className="p-5 sidebar_width border-r h-screen">
-    <div className="flex items-center justify-between">
-    <h1 className="font-bold text-2xl">LOGO</h1>
-    <img src={doubleArrow} className="w-4 h-4" alt="" />
-    </div>
-  
-    <div className='flex gap-3'>
-    <img src={linkPng} className="w-4 h-4" alt="" />
-    <p>Event Types</p>
-    </div>
-    </div>
+      <div className="py-5 pr-3 pl-10 z-10 border-r h-screen overflow-x-hidden fixed sidebar_width bg-white">
+        <div className="overflow-scroll">
+          <div className="flex items-center justify-between">
+            <h1 className="font-bold text-2xl">LOGO</h1>
+            <img src={doubleArrow} className="w-4 h-4" alt="" />
+          </div>
 
+          <div className="mt-10">
+            {routes
+              .filter((route) => route.isSidebar)
+              .map((route) => (
+                <Link key={route.path} to={route.path}>
+                  <div
+                    className="flex gap-3 mt-3 items-center sidebar_route_h rounded-xl p-2 "
+                    style={{
+                      backgroundColor: isActiveRoute(route.path)
+                        ? colors.hover[100]
+                        : "",
+                    }}
+                  >
+                    <span>{route.icon}</span>
+                    <p className="text-base font-medium">{route.name}</p>
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </div>
+      </div>
     </>
-  )
+  );
 }
