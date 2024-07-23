@@ -297,4 +297,8 @@
     justify-content: center;
     gap: 5px;
   }
+
+  .width100{
+    width: 100px;
+  }
 }

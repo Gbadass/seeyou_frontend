@@ -17,27 +17,21 @@ import userPng from './asset/images/user (7) 1.png'
 import editPng from './asset/images/edit-button 1.png'
 import linkblackPng from './asset/images/link (1) 1.png'
 import morePng from './asset/images/more 1.png'
+import calenderPng2 from './asset/images/calendar (6) 1 (1).png'
+import TaskPng from './asset/images/task 1.png'
+
+
+import { BiChevronDown } from "react-icons/bi";
 
 
 
 
 
+export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng,addPng,PersonPng,searchPng,notificationPng,profilePng,LinkPng,clockPng,userPng,editPng,linkblackPng,morePng,BiChevronDown,calenderPng2,TaskPng };
 
-
-
-
-
-
-
-
-
-
-
-
-
-export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng,addPng,PersonPng,searchPng,notificationPng,profilePng,LinkPng,clockPng,userPng,editPng,linkblackPng,morePng };
-
-
+export const calenderSvg = ()=>{
+  
+}
 
 export const Circle1 = () => {
   <svg

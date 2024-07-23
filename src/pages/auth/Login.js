@@ -55,7 +55,10 @@ export default function Login() {
   const handleLogin = async () => {
     setLoading(true)
     let { status, message,token, data } = await login(userDetails);
+
     try {
+
+      console.log(message)
       if (status) {
         dispatch(setUserAuth({ user: data, token }));
         Swal.fire({
@@ -64,7 +67,12 @@ export default function Login() {
           icon: "success",
         });
 
-
+      }else if(message){
+        Swal.fire({
+          title: "error!",
+          text: message,
+          icon: "error",
+        });
       } else {
         dispatch(
           addNotification({

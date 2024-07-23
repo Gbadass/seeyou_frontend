@@ -81,7 +81,13 @@ const [loading,setLoading]=useState(false)
       });
       setLoading(false)
       navigate("/login");
-    } else {
+    }else if(message){
+      Swal.fire({
+        title: "errorr!",
+        text: message,
+        icon: "error",
+      });
+    }else {
       dispatch(
         addNotification({
           type: "error",
@@ -90,6 +96,7 @@ const [loading,setLoading]=useState(false)
         })
       );
     }
+    setLoading(false)
   };
 
   return (

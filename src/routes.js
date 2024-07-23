@@ -1,10 +1,19 @@
 import {linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng} from './assets'
 import Layout from '././components/Layout'
 import Login from './pages/auth/Login'
+import SignUp from './pages/auth/SignUp'
 import EventTypes from './pages/EventTypes'
 
 
 let routes = [
+  {
+    path: "/signup",
+    name: " Sign Up",
+    icon: null,
+    component: SignUp,
+    isSidebar: false,
+    roles: [],
+},
   {
     path: "/login",
     name: " Login",
