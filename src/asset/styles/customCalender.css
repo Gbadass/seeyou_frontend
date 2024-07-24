@@ -1,0 +1,83 @@
+.react-calendar {
+  width: 350px;
+  max-width: 100%;
+  background: white;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.125em;
+  border-radius: 8px;
+
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: 400;
+  font-size: 15px;
+  color: #000000;
+  text-decoration: none;
+  border: none;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #000000;
+}
+
+.react-calendar__month-view__days {
+font-size: 15px;
+}
+
+/* Hide the year navigation buttons */
+.react-calendar__navigation__label {
+  pointer-events: none;
+}
+
+.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
+  display: none;
+}
+
+.custom-calendar .react-calendar__navigation__arrow {
+  font-size: 30px; /* Adjust this value to increase/decrease size */
+}
+
+.custom-calendar .custom-arrow {
+  width: 15px; /* Adjust size as needed */
+  height: 15px;
+}
+
+.custom-calendar .custom-arrow2 {
+  width: 15px; /* Adjust size as needed */
+  height: 15px;
+  align-items: flex-end;
+}
+
+.custom-calendar .react-calendar__navigation__next-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.custom-calendar .react-calendar__tile--now {
+  background-color: #794330;
+  color: white; 
+  border-radius: 50%;
+}
+
+.custom-calendar .react-calendar__tile--now:hover {
+  background-color: #794330; 
+}
+
+.custom-calendar .react-calendar__tile--active {
+  background-color: #D3C0BE !important; 
+  color: white; 
+  border-radius: 50%;
+}
+
+.custom-calendar .react-calendar__tile--active:hover {
+  background-color: #D3C0BE ; 
+}
+
+.custom-calendar .react-calendar__tile--now.react-calendar__tile--active:hover {
+  background-color: #D3C0BE; 
+}

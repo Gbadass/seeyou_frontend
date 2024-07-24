@@ -14,7 +14,6 @@ export default function TopBar() {
   const { colors, fonts } = useTheme(theme);
   return (
     <>
-      {/* <div className="px-3 py-5 w-full "> */}
       <div className="flex justify-left items-center sticky  h-20 px-3 py-5 w-full top-0 z-2 bg-white border">
         <div className="flex justify-between w-2/4">
         <h1 className="font-bold text-4xl">LOGO</h1>
@@ -42,7 +41,7 @@ export default function TopBar() {
 
       </div>
 
-      {/* </div> */}
+
     </>
   );
 }
