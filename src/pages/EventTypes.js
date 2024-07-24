@@ -6,6 +6,7 @@ import {
   editPng,
   linkblackPng,
   morePng,
+  arrowdownPng
 } from "./../assets";
 import { Box, theme, useTheme } from "@chakra-ui/react";
 import { useState } from "react";
@@ -22,25 +23,21 @@ export default function EventTypes() {
       <Layout>
         <div className="">
           <div className="flex justify-between items-center">
-            <div className="mt-2">
-              <h1 className="text-4xl font-semibold">Event types</h1>
-              <p className="text-sm">
-                create events to share for people to book on your calender
-              </p>
-            </div>
+
 
             <div>
               <button
                 className="top_bar_btn3 flex items-center border rounded-full justify-center gap-2 py-3"
-                style={{ borderColor: colors.primary_purp[100] }}
+                style={{ borderColor: colors.primary2[100] }}
               >
                 <img src={addPng} alt="" className="w-4 h-4" />
                 <p
                   className="text-base  font-medium"
-                  style={{ color: colors.primary_purp[100] }}
+                  style={{ color: colors.primary2[100] }}
                 >
-                  New Event Type
+                  Create
                 </p>
+                <img src={arrowdownPng} alt="" className="w-5 h-5" />
               </button>
             </div>
           </div>

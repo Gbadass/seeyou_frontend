@@ -29,7 +29,7 @@ export default function TopBar() {
             />
           </div>
 
-          <div className="flex items-center justify-center w-10 h-10 rounded-xl" style={{backgroundColor:colors.primary2[100]}}>
+          <div className="flex items-center justify-center w-10 h-10 rounded-xl" style={{backgroundColor:colors.primary2[200]}}>
             <img src={calenderPng2} alt="" className="w-5 h-5" />
           </div>
 

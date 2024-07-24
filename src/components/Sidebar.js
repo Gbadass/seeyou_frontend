@@ -1,4 +1,4 @@
-import { doubleArrow, linkPng } from "./../assets";
+import { doubleArrow, notificationPng,profilePng } from "./../assets";
 import routes from "../routes";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -19,6 +19,11 @@ export default function Sidebar() {
           <div className="flex items-center justify-between">
 
             <img src={doubleArrow} className="w-4 h-4" alt="" />
+
+            <div className="flex items-center gap-3">
+              <img src={notificationPng} className="w-6 h-6" alt="" />
+              <img src={profilePng} alt="" className="w-10 h-10" />
+            </div>
           </div>
 
         </div>

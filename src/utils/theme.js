@@ -8,7 +8,8 @@ const theme = extendTheme({
       300: '#e8b070'
     },
     primary2:{
-      100:'#D3C0BE'
+      100:'#794330',
+      200:'#D3C0BE'
     },
     secondary:{
       100: 'linear-gradient(90deg, #e8b070 0%, #e2452e 100%)',
