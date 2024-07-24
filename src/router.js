@@ -14,11 +14,11 @@ const UserRouter = () => {
 
   const renderRoute = (route) => {
     // redirect to the login page if not authenticated
-    if (!isAuthenticated) {
-      if (route.path != "/login") {
-        return <Navigate to="/login" />;
-      }
-    }
+    // if (!isAuthenticated) {
+    //   if (route.path != "/login") {
+    //     return <Navigate to="/login" />;
+    //   }
+    // }
 
     // Render the route component
     return <route.component />;

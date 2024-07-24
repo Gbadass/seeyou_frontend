@@ -7,6 +7,10 @@ const theme = extendTheme({
       200: '#ec8451',
       300: '#e8b070'
     },
+    primary2:{
+      100:'#794330',
+      200:'#D3C0BE'
+    },
     secondary:{
       100: 'linear-gradient(90deg, #e8b070 0%, #e2452e 100%)',
     },
@@ -27,6 +31,9 @@ const theme = extendTheme({
     },
     bordercolor:{
       100:'#E4E1E1'
+    },
+    text_color:{
+      100:'#4F4F4F'
     }
 
   },
