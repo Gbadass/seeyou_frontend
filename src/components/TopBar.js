@@ -15,7 +15,8 @@ export default function TopBar() {
   return (
     <>
       {/* <div className="px-3 py-5 w-full "> */}
-      <div className="flex justify-evenly items-center sticky  h-20 px-3 py-5 w-full top-0 z-2 bg-white border">
+      <div className="flex justify-left items-center sticky  h-20 px-3 py-5 w-full top-0 z-2 bg-white border">
+        <div className="flex justify-between w-2/4">
         <h1 className="font-bold text-4xl">LOGO</h1>
 
         <div className="flex items-center gap-2">
@@ -37,6 +38,8 @@ export default function TopBar() {
             <img src={TaskPng} alt="" className="w-5 h-5" />
           </div>
         </div>
+        </div>
+
       </div>
 
       {/* </div> */}
