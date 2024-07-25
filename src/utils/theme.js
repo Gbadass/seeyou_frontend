@@ -9,7 +9,8 @@ const theme = extendTheme({
     },
     primary2:{
       100:'#794330',
-      200:'#D3C0BE'
+      200:'#D3C0BE',
+      300:'#E9E0D9'
     },
     secondary:{
       100: 'linear-gradient(90deg, #e8b070 0%, #e2452e 100%)',
@@ -34,7 +35,14 @@ const theme = extendTheme({
     },
     text_color:{
       100:'#4F4F4F'
+    },
+    mycalender:{
+      100:'#DB6D32',
+      200:'#A2DB32',
+      300:'#DB32C4',
+      400:'#323DDB'
     }
+
 
   },
   fonts: {

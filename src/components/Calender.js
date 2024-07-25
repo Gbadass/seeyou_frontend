@@ -3,9 +3,17 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline' // a plugin!
+import { useState } from 'react'
+import TopBar from './TopBar'
 import './../asset/styles/calender.css'
 
 export default function Calendar() {
+
+  const [currentView, setCurrentView] = useState('timeGridDay')
+
+  const handleViewChange = (view) => {
+    setCurrentView(view)
+  }
 
   function renderDayHeader(args) {
     return (
@@ -29,13 +37,19 @@ export default function Calendar() {
 
   return (
     <div className='calendar-container mt-5'>
+           {/* <TopBar onViewChange={handleViewChange} currentView={currentView} /> */}
       <FullCalendar
         plugins={[timeGridPlugin, interactionPlugin]}
         initialView="timeGridDay"
         headerToolbar={{
           left: 'prev,next today',
           center: 'title',
-          right: 'timeGridDay,timeGridWeek,dayGridMonth'
+        }}
+        views={{
+          timeGridDay: { buttonText: 'day' },
+          timeGridWeek: { buttonText: 'week' },
+          dayGridMonth: { buttonText: 'month' },
+          dayGridYear: { buttonText: 'year' }
         }}
         slotDuration={'01:00:00'}
         slotLabelInterval={'01:00'}
