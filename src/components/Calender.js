@@ -7,13 +7,9 @@ import { useState } from 'react'
 import TopBar from './TopBar'
 import './../asset/styles/calender.css'
 
-export default function Calendar() {
+export default function Calendar({ currentView, onViewChange }) {
 
-  const [currentView, setCurrentView] = useState('timeGridDay')
 
-  const handleViewChange = (view) => {
-    setCurrentView(view)
-  }
 
   function renderDayHeader(args) {
     return (
@@ -34,6 +30,12 @@ export default function Calendar() {
     }
     return <span className="time-label">{args.text}</span>
   }
+
+  const handleDatesSet = (arg) => {
+    if (onViewChange && typeof onViewChange === 'function') {
+      onViewChange(arg.view.type);
+    }
+  };
 
   return (
     <div className='calendar-container mt-5'>
@@ -60,6 +62,7 @@ export default function Calendar() {
         nowIndicator={true}
         dayHeaderContent={renderDayHeader}
         slotLabelContent={renderSlotLabel}
+        datesSet={handleDatesSet}
       />
     </div>
   )
