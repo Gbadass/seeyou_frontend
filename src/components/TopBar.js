@@ -28,6 +28,15 @@ export default function TopBar({ onViewChange, currentView }) {
     { value: "dayGridYear", label: "Year" },
   ];
 
+
+  const handleViewChange = (newView) => {
+    console.log('TopBar: Changing view to:', newView);
+    if (onViewChange && typeof onViewChange === 'function') {
+      onViewChange(newView);
+    }
+  };
+
+
   return (
     <>
       <div className="flex justify-left items-center sticky  h-20 px-3 py-5 w-full top-0 z-50 bg-white ">
@@ -64,7 +73,7 @@ export default function TopBar({ onViewChange, currentView }) {
                 {viewOptions.map((option) => (
                   <MenuItem
                     key={option.value}
-                    onClick={() => onViewChange(option.value)}
+                    onClick={() => handleViewChange(option.value)}
                   >
                     {option.label}
                   </MenuItem>

@@ -6,7 +6,7 @@ import interactionPlugin from "@fullcalendar/interaction";
 import resourceTimelinePlugin from "@fullcalendar/resource-timeline"; // a plugin!
 import { useState } from "react";
 import TopBar from "./TopBar";
-import "./../asset/styles/calender.css";
+import "./../asset/styles/weekCalender.css";
 
 export default function Calendar({ currentView = 'timeGridDay', onViewChange }) {
   console.log('Calendar: Received currentView:', currentView);
@@ -57,7 +57,21 @@ export default function Calendar({ currentView = 'timeGridDay', onViewChange }) 
   };
 
   return (
-    <div className="calendar-container mt-5">
+    <div className="calendar-container mt-5 w-full relative">
+  
+      <div className="weekday_lines flex absolute w-full top-20 h-full z-40 ">
+        <hr className="h-full border border-r-0 border-white"/>
+        <hr className="h-full border border-r-0"/>
+        <hr className="h-full border border-r-0"/>
+        <hr className="h-full border border-r-0"/>
+        <hr className="h-full border border-r-0"/>
+        <hr className="h-full border border-r-0"/>
+        <hr className="h-full border border-r-0"/>
+
+      </div>
+
+
+
       <FullCalendar
        key={key} 
         ref={calendarRef}

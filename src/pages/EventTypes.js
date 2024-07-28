@@ -10,11 +10,10 @@ import {
 } from "./../assets";
 import { Box, theme, useTheme } from "@chakra-ui/react";
 import { useState } from "react";
-import NoEvent from "./../components/NoEvent";
-import Event from "./../components/Event";
 import Calendar from "../components/Calender";
+import WeekCalendar from "./../components/WeekCalender";
 
-export default function EventTypes() {
+export default function EventTypes({ currentView, onViewChange }) {
   const { colors, fonts } = useTheme(theme);
   const [noEvent, setNoEvent] = useState(true);
 
@@ -43,7 +42,7 @@ export default function EventTypes() {
           </div>
 
 
-          {noEvent?<Calendar/>:""}
+          {noEvent?<WeekCalendar currentView={currentView} onViewChange={onViewChange}/>:""}
         </div>
       </Layout>
     </>

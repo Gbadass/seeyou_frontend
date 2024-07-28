@@ -8,12 +8,12 @@
 
 .fc {
   background-color: white !important;
-  /* border: 1px solid green; */
 }
 
 .calendar-container {
   font-family: "Poppins", sans-serif;
-/* border: 1px solid red; */
+  /* border: 1px solid red; */
+  /* position: relative; */
 }
 
 .fc-toolbar-title {
@@ -90,3 +90,9 @@
 
 } 
 
+.weekday_lines{
+  gap: 137px;
+  /* position: absolute; */
+  /* border: 1px solid red; */
+  /* top: 50px; */
+}
