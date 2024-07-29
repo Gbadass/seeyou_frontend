@@ -20,8 +20,27 @@
   font-size: 1.2em !important;
 }
 
-.fc-timegrid-slot-label {
+/* .fc-timegrid-slot-label {
   font-size: 0.9em;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: 1px solid red;
+
+}
+
+
+
+.fc .fc-timegrid-slot-label-frame {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+} */
+
+.fc .fc-timegrid-slot-label-cushion {
+  padding-right: 8px;
 }
 
 .fc-timegrid-axis {
@@ -90,9 +109,6 @@
 
 } 
 
-.weekday_lines{
-  gap: 137px;
-  /* position: absolute; */
-  /* border: 1px solid red; */
-  /* top: 50px; */
+.width80px{
+  width:138px;
 }

@@ -41,12 +41,7 @@ export default function Calendar({ currentView = 'timeGridDay', onViewChange }) 
 
   useEffect(() => {
     console.log('Calendar: Current view:', currentView);
-    if (calendarRef.current && currentView) {
-      const calendarApi = calendarRef.current.getApi();
-      console.log('Calendar: Attempting to change view to:', currentView);
-      calendarApi.changeView(currentView);
-      setKey(prevKey => prevKey + 1); // Force re-render
-    }
+
   }, [currentView]);
 
   const handleDatesSet = (arg) => {

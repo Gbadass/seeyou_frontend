@@ -8,8 +8,11 @@ import { useState } from "react";
 import TopBar from "./TopBar";
 import "./../asset/styles/weekCalender.css";
 
-export default function Calendar({ currentView = 'timeGridDay', onViewChange }) {
-  console.log('Calendar: Received currentView:', currentView);
+export default function Calendar({
+  currentView = "timeGridDay",
+  onViewChange,
+}) {
+  console.log("Calendar: Received currentView:", currentView);
   const calendarRef = useRef(null);
   const [key, setKey] = useState(0);
 
@@ -27,53 +30,38 @@ export default function Calendar({ currentView = 'timeGridDay', onViewChange }) 
   }
 
   function renderSlotLabel(args) {
-    if (args.date.getHours() === 6) {
-      // Assuming 6 AM is your first time slot
+    const hour = args.date.getHours();
+    const minutes = args.date.getMinutes();
+
+    if (hour === 5 && minutes === 0) {
       return (
         <div className="custom-slot-label">
           <span className="gmt-label">GMT +1</span>
+          {/* <span className="time-label">{args.text}</span> */}
         </div>
       );
     }
+
     return <span className="time-label">{args.text}</span>;
   }
 
+  useEffect(() => {}, [currentView]);
 
-  useEffect(() => {
-    console.log('Calendar: Current view:', currentView);
-    if (calendarRef.current && currentView) {
-      const calendarApi = calendarRef.current.getApi();
-      console.log('Calendar: Attempting to change view to:', currentView);
-      calendarApi.changeView(currentView);
-      setKey(prevKey => prevKey + 1); // Force re-render
-    }
-  }, [currentView]);
-
-  const handleDatesSet = (arg) => {
-    console.log('Calendar: handleDatesSet called with view:', arg.view.type);
-    if (onViewChange && typeof onViewChange === 'function' && arg.view.type !== currentView) {
-      onViewChange(arg.view.type);
-    }
-  };
+  const handleDatesSet = (arg) => {};
 
   return (
     <div className="calendar-container mt-5 w-full relative">
-  
-      <div className="weekday_lines flex absolute w-full top-20 h-full z-40 ">
-        <hr className="h-full border border-r-0 border-white"/>
-        <hr className="h-full border border-r-0"/>
-        <hr className="h-full border border-r-0"/>
-        <hr className="h-full border border-r-0"/>
-        <hr className="h-full border border-r-0"/>
-        <hr className="h-full border border-r-0"/>
-        <hr className="h-full border border-r-0"/>
-
+      <div className="weekday_lines flex absolute w-full top-20 h-full z-40">
+        <div className="border border-t-0 width80px border-l-0  text-center text-sm">SUN 14</div>
+        <div className="border border-t-0 width80px border-l-0 text-center text-sm">SUN 14</div>
+        <div className="border border-t-0 width80px  border-l-0 text-center text-sm">MON 14</div>
+        <div className="border border-t-0 width80px border-l-0 text-center text-sm">TUE 14</div>
+        <div className="border border-t-0 width80px border-l-0 text-center text-sm">WEN 14</div>
+        <div className="border border-t-0 width80px border-l-0 text-center text-sm">THU 14</div>
+        <div className="border border-t-0 width80px border-l-0 text-center text-sm">FRI 14</div>
       </div>
 
-
-
       <FullCalendar
-       key={key} 
         ref={calendarRef}
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView={currentView}
@@ -87,10 +75,10 @@ export default function Calendar({ currentView = 'timeGridDay', onViewChange }) 
           dayGridMonth: { buttonText: "month" },
           dayGridYear: { buttonText: "year" },
         }}
-        slotDuration={"01:00:00"}
-        slotLabelInterval={"01:00"}
-        slotMinTime="06:00:00"
-        slotMaxTime="18:00:00"
+        slotDuration="01:00:00"
+        slotLabelInterval="01:00"
+        slotMinTime="05:00:00"
+        slotMaxTime="19:00:00"
         height="auto"
         allDaySlot={false}
         nowIndicator={true}
