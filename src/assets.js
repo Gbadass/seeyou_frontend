@@ -20,6 +20,14 @@ import morePng from './asset/images/more 1.png'
 import calenderPng2 from './asset/images/calendar (6) 1 (1).png'
 import TaskPng from './asset/images/task 1.png'
 import arrowdownPng from './asset/images/down (3) 1.png'
+import arrowdown2Png from './asset/images/down (2) 1.png'
+import addUserPng from './asset/images/add-user (2) 1.png'
+import arrowPng from './asset/images/down (2) 3 (1).png'
+import calenderAddPng from './asset/images/add (6) 1.png'
+
+
+
+
 
 
 
@@ -29,7 +37,7 @@ import { BiChevronDown } from "react-icons/bi";
 
 
 
-export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng,addPng,PersonPng,searchPng,notificationPng,profilePng,LinkPng,clockPng,userPng,editPng,linkblackPng,morePng,BiChevronDown,calenderPng2,TaskPng,arrowdownPng };
+export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng,addPng,PersonPng,searchPng,notificationPng,profilePng,LinkPng,clockPng,userPng,editPng,linkblackPng,morePng,BiChevronDown,calenderPng2,TaskPng,arrowdownPng,arrowdown2Png,addUserPng,arrowPng,calenderAddPng };
 
 export const calenderSvg = ()=>{
   

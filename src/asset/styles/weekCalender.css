@@ -1,0 +1,120 @@
+.fc-toolbar-title{
+  display: none;
+}
+
+.fc .fc-header-toolbar{
+  display: none;
+}
+
+.fc {
+  background-color: white !important;
+}
+
+.calendar-container {
+  font-family: "Poppins", sans-serif;
+  /* border: 1px solid red; */
+  /* position: relative; */
+}
+
+.fc-toolbar-title {
+  font-size: 1.2em !important;
+}
+
+/* .fc-timegrid-slot-label {
+  font-size: 0.9em;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: 1px solid red;
+
+}
+
+
+
+.fc .fc-timegrid-slot-label-frame {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+} */
+
+.fc .fc-timegrid-slot-label-cushion {
+  padding-right: 8px;
+}
+
+.fc-timegrid-axis {
+  width: 60px !important;
+}
+
+.fc-timegrid-slot {
+  height: 60px !important;
+  background-color: white;
+}
+
+.fc-toolbar-chunk {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Remove all borders */
+.fc-theme-standard td, .fc-theme-standard th {
+  border: none !important;
+}
+
+/* Remove the header border */
+.fc .fc-scrollgrid {
+  border: none !important;
+}
+
+/* Remove the left border of the time column */
+.fc .fc-timegrid-axis {
+  border-right: none !important;
+}
+
+/* Remove the left border of the time column */
+.fc .fc-timegrid-axis {
+  border-right: none !important;
+}
+
+.fc .fc-timegrid-slot {
+  border-top: 1px solid #CFCFCF !important;
+}
+
+/* Set background color for the time column */
+.fc .fc-timegrid-axis {
+  background-color: white;
+}
+
+.fc .fc-scrollgrid-sync-inner{
+  display: flex;
+  align-items: flex-start;
+  /* text-align: left; */
+
+}
+
+
+.custom-day-header .day-of-week {
+  font-size: 9px;
+  font-weight: 400;
+  color: #4F4F4F;
+  text-transform: uppercase;
+}
+
+
+.custom-day-header .day-number {
+  font-size: 20px;
+  font-weight: 600;
+
+} 
+
+.width80px{
+  width:138px;
+}
+
+.border-bottom {
+  border-bottom: 5px solid #794330; /* Adjust color and width as needed */
+  padding-bottom: 4px; /* Add some padding to separate text from border */
+color: #794330;
+}
