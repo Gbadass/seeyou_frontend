@@ -9,12 +9,13 @@ import TopBar from "./TopBar";
 import "./../asset/styles/weekCalender.css";
 
 export default function Calendar({
-  currentView = "timeGridDay",
+  currentView = "timeGridWeek",
   onViewChange,
 }) {
   console.log("Calendar: Received currentView:", currentView);
   const calendarRef = useRef(null);
-  const [key, setKey] = useState(0);
+  // const [key, setKey] = useState(0);
+  const [currentWeek, setCurrentWeek] = useState([]);
 
   function renderDayHeader(args) {
     return (
@@ -45,20 +46,44 @@ export default function Calendar({
     return <span className="time-label">{args.text}</span>;
   }
 
-  useEffect(() => {}, [currentView]);
+  useEffect(() => {
+    if (calendarRef.current) {
+      const calendarApi = calendarRef.current.getApi();
+      const start = calendarApi.view.currentStart;
+      const end = calendarApi.view.currentEnd;
+      const week = [];
+      for (let day = new Date(start); day < end; day.setDate(day.getDate() + 1)) {
+        week.push(new Date(day));
+      }
+      setCurrentWeek(week);
+    }
+  }, []);
+
+  function isToday(date) {
+    const today = new Date();
+    return date.getDate() === today.getDate() &&
+           date.getMonth() === today.getMonth() &&
+           date.getFullYear() === today.getFullYear();
+  }
+
+  function formatDate(date) {
+    const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    return `${days[date.getDay()]} ${date.getDate()}`;
+  }
 
   const handleDatesSet = (arg) => {};
 
   return (
     <div className="calendar-container mt-5 w-full relative">
       <div className="weekday_lines flex absolute w-full top-20 h-full z-40">
-        <div className="border border-t-0 width80px border-l-0  text-center text-sm">SUN 14</div>
-        <div className="border border-t-0 width80px border-l-0 text-center text-sm">SUN 14</div>
-        <div className="border border-t-0 width80px  border-l-0 text-center text-sm">MON 14</div>
-        <div className="border border-t-0 width80px border-l-0 text-center text-sm">TUE 14</div>
-        <div className="border border-t-0 width80px border-l-0 text-center text-sm">WEN 14</div>
-        <div className="border border-t-0 width80px border-l-0 text-center text-sm">THU 14</div>
-        <div className="border border-t-0 width80px border-l-0 text-center text-sm">FRI 14</div>
+      {currentWeek.map((date, index) => (
+        <div key={index} className={`border border-t-0 width80px ${index === 0 ? '' : 'border-l-0'} ${index === 6 ? 'border-r-0' : ''} text-center text-sm`}>
+          <p className={isToday(date) ? 'border-bottom' : ''}>
+            {formatDate(date)}
+          </p>
+        </div>
+      ))}
+
       </div>
 
       <FullCalendar
@@ -84,7 +109,15 @@ export default function Calendar({
         nowIndicator={true}
         dayHeaderContent={renderDayHeader}
         slotLabelContent={renderSlotLabel}
-        datesSet={handleDatesSet}
+        datesSet={(arg)=> {
+          const start = arg.start;
+          const end = arg.end;
+          const week = [];
+          for(let day = new Date(start);day<end; day.setDate(day.getDate()+1)){
+            week.push(new Date(day));
+          }
+          setCurrentWeek(week);
+        }}
       />
     </div>
   );

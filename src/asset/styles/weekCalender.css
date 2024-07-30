@@ -112,3 +112,9 @@
 .width80px{
   width:138px;
 }
+
+.border-bottom {
+  border-bottom: 5px solid #794330; /* Adjust color and width as needed */
+  padding-bottom: 4px; /* Add some padding to separate text from border */
+color: #794330;
+}
