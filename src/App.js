@@ -26,6 +26,7 @@ function App() {
     if(token){
       const {status,data,message} = await loggedIn()
       if(status){
+        console.log("data",data)
         dispatch(setUserAuth({ user: data }));
       }else{
         dispatch(resetUser());

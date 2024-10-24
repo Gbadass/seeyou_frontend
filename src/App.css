@@ -305,4 +305,118 @@
   .width241{
     width: 241px;
   }
+
+  /* new line */
+
+  .get_start_Btn{
+    padding: 14px 45px;
+    border-radius: 14px;
+    white-space: nowrap;
+    color: white;
+    /* height: 48px; */
+    /* width: 175px; */
+  }
+
+
+
+  .text96px{
+    font-size: 90px;
+    font-weight: 600;
+    line-height: 96px;
+    text-align: center;
+    /* width: 792px; */
+    margin: 0 auto;
+  }
+
+  .calender_desc{
+    font-size: 20px;
+    text-align: center;
+    line-height: 29.23px;
+    font-weight: 400;
+    width: 792px;
+  }
+
+  .widthcalenderdesc{
+    width: 700px;
+  }
+
+  .mobile_ads_card{
+    height: 614px;
+    border-radius: 12px;
+    box-shadow: 0px -6.41px 10.99px 0px #BAE3D780;
+    background: linear-gradient(9.14deg, #FFFFFF 6.93%, #F5EDFF 97.85%);
+    width: 420px;
+    padding-top: 25.08px;
+
+    
+  }
+
+  .mobile_ads_card2{
+    height: 614px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(240, 249, 246, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+    /* backdrop-filter: blur(28.08000946044922px) */
+    box-shadow: 0px -6.41px 10.99px 0px #E3A5C780;
+    width: 420px;
+    padding-top: 25.08px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .mobile_ads_card_img{
+    width: 334px;
+    height: 543.38px;
+    margin: 0 auto;
+    top: 25.08px;
+  }
+
+  .mobile_ads_card_img1{
+    width: 301.5px;
+    height: 116.18px;
+    margin: 0 auto;
+  }
+
+  .mobile_ads_card_img2{
+    width: 320px;
+    height: 182.02px;
+    margin: 0 auto;
+    top: 290px;
+  }
+
+  .play_store_cont{
+    width: 174px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 20px 0px #0000001F;
+    border-radius: 14px;
+  }
+
+  .app_store_cont{
+    width: 174px;
+    height: 56px;
+  }
+
+  .play_store_cont_img1{
+    width: 130px;
+    height: 32px;
+  }
+
+  .locationBanner_cont{
+    background: url('./asset/landingImages/Event card frame.png');
+    height: 774px;
+
+  }
+
+  .benefit_btn{
+    padding: 8px 16px;
+    border-radius: 15.5px;
+    border: 1px solid linear-gradient(270deg, rgba(209, 236, 228, 0.5) 0%, #E3A5C7 100%);
+    
+    
+
+  }
 }

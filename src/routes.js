@@ -3,6 +3,7 @@ import Layout from '././components/Layout'
 import Login from './pages/auth/Login'
 import SignUp from './pages/auth/SignUp'
 import EventTypes from './pages/EventTypes'
+import LandingPage from './pages/landingPage/LandingPage'
 
 
 let routes = [
@@ -13,6 +14,14 @@ let routes = [
     component: SignUp,
     isSidebar: false,
     roles: [],
+},
+{
+  path: "/",
+  name: " landing",
+  icon: null,
+  component: LandingPage,
+  isSidebar: false,
+  roles: [],
 },
   {
     path: "/login",

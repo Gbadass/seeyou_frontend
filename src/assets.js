@@ -24,6 +24,16 @@ import arrowdown2Png from './asset/images/down (2) 1.png'
 import addUserPng from './asset/images/add-user (2) 1.png'
 import arrowPng from './asset/images/down (2) 3 (1).png'
 import calenderAddPng from './asset/images/add (6) 1.png'
+import seeyouLogo from './asset/landingImages/See you logo.png'
+import appadscont from './asset/landingImages/Mockupfd@3x.png'
+import appadsimg2 from './asset/landingImages/Frame 454 (1).png'
+import appadsimg3 from './asset/landingImages/Frame 1000007945.png'
+import playstoreimg from './asset/landingImages/Frame 1000008023.png'
+import appstoreimg from './asset/landingImages/Frame 1000008023 2.png'
+import locationBanner from './asset/landingImages/Event card frame.png'
+
+
+
 
 
 
@@ -37,7 +47,7 @@ import { BiChevronDown } from "react-icons/bi";
 
 
 
-export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng,addPng,PersonPng,searchPng,notificationPng,profilePng,LinkPng,clockPng,userPng,editPng,linkblackPng,morePng,BiChevronDown,calenderPng2,TaskPng,arrowdownPng,arrowdown2Png,addUserPng,arrowPng,calenderAddPng };
+export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng,addPng,PersonPng,searchPng,notificationPng,profilePng,LinkPng,clockPng,userPng,editPng,linkblackPng,morePng,BiChevronDown,calenderPng2,TaskPng,arrowdownPng,arrowdown2Png,addUserPng,arrowPng,calenderAddPng,seeyouLogo,appadscont,appadsimg2,appadsimg3,playstoreimg,appstoreimg,locationBanner };
 
 export const calenderSvg = ()=>{
   

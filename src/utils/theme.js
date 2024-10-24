@@ -2,6 +2,15 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   colors:{
+    gradiant_primary:{
+      100: 'linear-gradient(180deg, #6D4F98 0%, #E3A5C7 100%)'
+    },
+    
+    primary01:{
+      100:'#6D4F98',
+      200:'linear-gradient(9.14deg, #FFFFFF 6.93%, #F5EDFF 97.85%)',
+      300:'F0EDF4'
+    },
     primary:{
       100: '#E2452E',
       200: '#ec8451',
