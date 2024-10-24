@@ -242,37 +242,37 @@
     border: 1px solid #e4e1e1;
   }
 
-  .link_circle{
+  .link_circle {
     width: 60px;
     height: 60px;
   }
 
-  .centerItem{
+  .centerItem {
     margin: 0 auto;
   }
 
-  .noevent_message{
+  .noevent_message {
     width: 371px;
     line-height: 22px;
     text-align: center;
   }
 
-  .eventCard{
+  .eventCard {
     height: 94px;
     border-radius: 30px;
     border: 1px solid #e4e1e1;
   }
 
-  .event_link{
-    color: #BCBCBC;
+  .event_link {
+    color: #bcbcbc;
     font-size: 18px;
     font-weight: 400;
   }
 
-  .event_time{
+  .event_time {
     width: 86px;
     height: 25px;
-    border: 1px solid #E4E1E1;
+    border: 1px solid #e4e1e1;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -281,15 +281,15 @@
     gap: 5px;
   }
 
-  .even_time_text{
+  .even_time_text {
     font-size: 10px;
     font-weight: 500;
   }
 
-  .event_users{
+  .event_users {
     width: 64px;
     height: 25px;
-    border: 1px solid #E4E1E1;
+    border: 1px solid #e4e1e1;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -298,17 +298,17 @@
     gap: 5px;
   }
 
-  .width100{
+  .width100 {
     width: 100px;
   }
 
-  .width241{
+  .width241 {
     width: 241px;
   }
 
   /* new line */
 
-  .get_start_Btn{
+  .get_start_Btn {
     padding: 14px 45px;
     border-radius: 14px;
     white-space: nowrap;
@@ -317,9 +317,7 @@
     /* width: 175px; */
   }
 
-
-
-  .text96px{
+  .text96px {
     font-size: 90px;
     font-weight: 600;
     line-height: 96px;
@@ -328,7 +326,7 @@
     margin: 0 auto;
   }
 
-  .calender_desc{
+  .calender_desc {
     font-size: 20px;
     text-align: center;
     line-height: 29.23px;
@@ -336,87 +334,114 @@
     width: 792px;
   }
 
-  .widthcalenderdesc{
+  .widthcalenderdesc {
     width: 700px;
   }
 
-  .mobile_ads_card{
+  .mobile_ads_card {
     height: 614px;
     border-radius: 12px;
-    box-shadow: 0px -6.41px 10.99px 0px #BAE3D780;
-    background: linear-gradient(9.14deg, #FFFFFF 6.93%, #F5EDFF 97.85%);
+    box-shadow: 0px -6.41px 10.99px 0px #bae3d780;
+    background: linear-gradient(9.14deg, #ffffff 6.93%, #f5edff 97.85%);
     width: 420px;
     padding-top: 25.08px;
-
-    
   }
 
-  .mobile_ads_card2{
+  .mobile_ads_card2 {
     height: 614px;
     border-radius: 12px;
-    background: linear-gradient(180deg, rgba(240, 249, 246, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(240, 249, 246, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
     /* backdrop-filter: blur(28.08000946044922px) */
-    box-shadow: 0px -6.41px 10.99px 0px #E3A5C780;
+    box-shadow: 0px -6.41px 10.99px 0px #e3a5c780;
     width: 420px;
     padding-top: 25.08px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
   }
 
-  .mobile_ads_card_img{
+  .mobile_ads_card_img {
     width: 334px;
     height: 543.38px;
     margin: 0 auto;
     top: 25.08px;
   }
 
-  .mobile_ads_card_img1{
+  .mobile_ads_card_img1 {
     width: 301.5px;
     height: 116.18px;
     margin: 0 auto;
   }
 
-  .mobile_ads_card_img2{
+  .mobile_ads_card_img2 {
     width: 320px;
     height: 182.02px;
     margin: 0 auto;
     top: 290px;
   }
 
-  .play_store_cont{
+  .play_store_cont {
     width: 174px;
     height: 56px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 4px 20px 0px #0000001F;
+    box-shadow: 0px 4px 20px 0px #0000001f;
     border-radius: 14px;
   }
 
-  .app_store_cont{
+  .app_store_cont {
     width: 174px;
     height: 56px;
   }
 
-  .play_store_cont_img1{
+  .play_store_cont_img1 {
     width: 130px;
     height: 32px;
   }
 
-  .locationBanner_cont{
-    background: url('./asset/landingImages/Event card frame.png');
+  .locationBanner_cont {
+    background: url("./asset/landingImages/Event card frame.png");
     height: 774px;
-
   }
 
-  .benefit_btn{
+  .benefit_btn {
     padding: 8px 16px;
     border-radius: 15.5px;
-    border: 1px solid linear-gradient(270deg, rgba(209, 236, 228, 0.5) 0%, #E3A5C7 100%);
-    
-    
+    font-size: 16px;
+    border: 1px solid;
 
+    border-color: linear-gradient(
+      270deg,
+      rgba(209, 236, 228, 0.5) 0%,
+      #e3a5c7 100%
+    );
+  }
+
+  .love_seeyou{
+    font-size: 86px;
+    font-family: 700;
+    text-align: center;
+  }
+
+  .love_seeyou span{
+    background-clip: text;
+    -webkit-background-clip: text; /* For WebKit-based browsers */
+    color: transparent;
+    display: inline-block;
+  }
+
+  .PolyganBanner_img{
+    width: 29.94px;
+    height: 29.94px;
+  }
+
+  .benefit1_img{
+height: 400px;
+width: 537px;
   }
 }

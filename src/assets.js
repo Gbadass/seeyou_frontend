@@ -31,6 +31,13 @@ import appadsimg3 from './asset/landingImages/Frame 1000007945.png'
 import playstoreimg from './asset/landingImages/Frame 1000008023.png'
 import appstoreimg from './asset/landingImages/Frame 1000008023 2.png'
 import locationBanner from './asset/landingImages/Event card frame.png'
+import PolyganBanner from './asset/landingImages/Polygon 1 (1).png'
+import PolyganBanner2 from './asset/landingImages/Polygon 2.png'
+
+import benefit2 from './asset/landingImages/Frame 1000008081.png'
+import benefit3 from './asset/landingImages/Frame 1000008082.png'
+import benefit4 from './asset/landingImages/Frame 1000008083.png'
+import benefit1 from './asset/landingImages/Frame 1000007993.png'
 
 
 
@@ -47,7 +54,7 @@ import { BiChevronDown } from "react-icons/bi";
 
 
 
-export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng,addPng,PersonPng,searchPng,notificationPng,profilePng,LinkPng,clockPng,userPng,editPng,linkblackPng,morePng,BiChevronDown,calenderPng2,TaskPng,arrowdownPng,arrowdown2Png,addUserPng,arrowPng,calenderAddPng,seeyouLogo,appadscont,appadsimg2,appadsimg3,playstoreimg,appstoreimg,locationBanner };
+export  { googlePng,doubleArrow,linkPng,bookingPng,avialabilityPng,inboxPng,calenderPng,applicationPng,addPng,PersonPng,searchPng,notificationPng,profilePng,LinkPng,clockPng,userPng,editPng,linkblackPng,morePng,BiChevronDown,calenderPng2,TaskPng,arrowdownPng,arrowdown2Png,addUserPng,arrowPng,calenderAddPng,seeyouLogo,appadscont,appadsimg2,appadsimg3,playstoreimg,appstoreimg,locationBanner,PolyganBanner,PolyganBanner2,benefit1,benefit2,benefit3,benefit4 };
 
 export const calenderSvg = ()=>{
   
