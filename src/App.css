@@ -338,30 +338,23 @@
     width: 700px;
   }
 
-  .mobile_ads_card {
-    height: 614px;
-    border-radius: 12px;
-    box-shadow: 0px -6.41px 10.99px 0px #bae3d780;
-    background: linear-gradient(9.14deg, #ffffff 6.93%, #f5edff 97.85%);
-    width: 420px;
-    padding-top: 25.08px;
+  .mobile_ads_card01 {
+    height: 792px;
+    width: 100%;
+    background-size: contain; /* Ensure the entire image fits inside the container */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center;
+    background-image: url("./asset/landingImages/Frame 1000008107 (1).png");
   }
 
-  .mobile_ads_card2 {
-    height: 614px;
-    border-radius: 12px;
-    background: linear-gradient(
-      180deg,
-      rgba(240, 249, 246, 0.5) 0%,
-      rgba(255, 255, 255, 0.5) 100%
-    );
-    /* backdrop-filter: blur(28.08000946044922px) */
-    box-shadow: 0px -6.41px 10.99px 0px #e3a5c780;
-    width: 420px;
-    padding-top: 25.08px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .mobile_ads_card02 {
+    height: 430.96px;
+    width: 348.09px;
+  }
+
+  .mobile_ads_card03 {
+    height: 377.09px;
+    width: 304.58px;
   }
 
   .mobile_ads_card_img {
@@ -411,10 +404,9 @@
 
   .benefit_btn {
     padding: 8px 16px;
-    border-radius: 15.5px;
+    border-radius: 15.45px;
     font-size: 16px;
     border: 1px solid;
-
     border-color: linear-gradient(
       270deg,
       rgba(209, 236, 228, 0.5) 0%,
@@ -422,26 +414,219 @@
     );
   }
 
-  .love_seeyou{
+  .love_seeyou {
     font-size: 86px;
     font-family: 700;
     text-align: center;
   }
 
-  .love_seeyou span{
+  .love_seeyou span {
     background-clip: text;
     -webkit-background-clip: text; /* For WebKit-based browsers */
     color: transparent;
     display: inline-block;
   }
 
-  .PolyganBanner_img{
+  .PolyganBanner_img {
     width: 29.94px;
     height: 29.94px;
   }
 
-  .benefit1_img{
-height: 400px;
-width: 537px;
+  .benefit1_img {
+    height: 400px;
+    width: 537px;
   }
+
+  .animated_text {
+    font-size: 90.62px;
+    font-weight: 500;
+  }
+
+  .animated_text2 {
+    font-size: 90.62px;
+    font-weight: 300;
+  }
+
+  .animated_text,
+  .animated_text2 {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .smart_features {
+    height: 474px;
+  }
+
+  .smart_features_h1 {
+    font-size: 64px;
+    font-weight: 500;
+    /* width: 697px; */
+    line-height: 64px;
+  }
+
+  .smart_features_p {
+    font-size: 24px;
+    font-weight: 400;
+    color: #19191c;
+    /* width: 697px; */
+    line-height: 29.23px;
+  }
+
+  .smart_features_span {
+    background-clip: text;
+    -webkit-background-clip: text; /* For WebKit-based browsers */
+    color: transparent;
+    display: inline-block;
+  }
+
+  .circle_frame {
+    height: 65px;
+    width: 65px;
+  }
+
+  .lineframe {
+    height: 488.48px;
+    left: 120px;
+  }
+
+  .seyou_banner {
+    height: 839px;
+    width: 100%;
+    background-image: url("./asset/landingImages/Frame 1000008080.png");
+    background-size: contain; /* Ensure the entire image fits inside the container */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center;
+  }
+
+  .grid_part1 {
+    width: 738px;
+    height: 562;
+    border-radius: 22.15px;
+  }
+
+  .grid_part3 {
+    width: 520px;
+    height: 562px;
+    border-radius: 22.15px;
+  }
+
+  .grid_part4 {
+    width: 738px;
+    height: 562px;
+    border-radius: 22.15px;
+  }
+
+  .grid_part2 {
+    width: 520px;
+    height: 562px;
+    border-radius: 22.15px;
+  }
+
+  .accordian_cont {
+    width: 610px;
+    height: 173px;
+
+    border-radius: 24px;
+  }
+
+  .Abg_color {
+    background-color: #f9f9f9;
+  }
+
+  .css-17mg6aq:last-of-type {
+    border: none;
+  }
+
+  .css-17mg6aq {
+    border: none;
+  }
+
+  .acccordianicon_img {
+    height: 59px;
+    width: 59px;
+  }
+
+  .fax_icons {
+    width: 30.18px;
+    height: 25px;
+  }
+
+  .fax_icons2 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .fax_text {
+    font-size: 80px;
+    font-weight: 600;
+    background: linear-gradient(180deg, #6d4f98 0%, #e3a5c7 100%);
+    background-clip: text;
+    -webkit-background-clip: text; /* For WebKit-based browsers */
+    color: transparent;
+    display: inline-block;
+  }
+
+  .fax_p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.23px;
+    color: #19191c;
+    width: 435px;
+    white-space: nowrap;
+  }
+
+  .mailing_list {
+    background: linear-gradient(180deg, #6d4f98 0%, #e3a5c7 100%);
+    background-clip: text;
+    -webkit-background-clip: text; /* For WebKit-based browsers */
+    color: transparent;
+    display: inline-block;
+  }
+
+  .mailing_icon {
+    width: 48.92px;
+    height: 48.92px;
+  }
+
+  .mailing_btn {
+    width: 108px;
+    height: 41px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #6d4f98 0%, #e3a5c7 100%);
+    padding: 25px 25px;
+    color: white;
+  }
+
+  .mailing_btn img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mailing_inpt_cont {
+    border: 0.5px solid;
+    border-color: linear-gradient(180deg, #6d4f98 0%, #e3a5c7 100%);
+
+  }
+
+  .mailing_inpt_cont {
+    padding: 2px; /* Adjust this for border thickness */
+    border-radius: 10px;
+    background: linear-gradient(180deg, #6d4f98 0%, #e3a5c7 100%);
+  }
+  
+  .mailing_inpt_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px; /* Inner div radius should be slightly smaller */
+    background-color: white; /* Inner background color */
+    height: 100%;
+    padding: 10px;
+
+  }
+
+  .bgFeature{
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 47%, #F0F9F6 100%);
+
+  }
+  
 }
